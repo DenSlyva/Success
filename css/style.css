@@ -1,0 +1,18 @@
+body {
+	font-family: "Open Sans", sans-serif;
+	text-align: center;
+	line-height: 1.6;
+	font-size: 16px;
+}
+
+h1 {
+	font-weight: 800;
+	font-size: 95px;
+	color: #6b68ec;
+}
+
+p {
+	font-weight: 600;
+	font-size: 22px;
+	color: #484855;
+}
