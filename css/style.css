@@ -1,8 +1,36 @@
+:root {
+	--base-font: "Open Sans", sans-serif;
+	--base-font-size: 16px;
+
+	--color-wh: #f1eeee;
+	--color-wh-rgb: 241, 238, 238;
+
+	--color-red: #e11a1a;
+	--color-red-rgb: 225, 26, 26;
+	--color-red-hover: #bd1111;
+
+	--color-blue: blue;
+	--color-blue-rgb: 0, 0, 255;
+
+	--color-black: #1c1c25;
+
+	--color-green: #c2d8be;
+
+	--color-red-light: #e5afaf;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+}
+
 body {
-	font-family: "Open Sans", sans-serif;
+	font-family: var(--base-font);
 	text-align: center;
 	line-height: 1.6;
-	font-size: 16px;
+	font-size: var(--base-font-size);
 	background-color: #fbfdff;
 }
 
@@ -30,17 +58,100 @@ a {
 	line-height: 1.76;
 }
 
+.red {
+	color: rgba(var(--color-red-rgb), 0.8);
+}
+
+.blue {
+	color: rgba(var(--color-blue-rgb), 0.5);
+}
+
 .btn {
-	padding: 36px 87px;
-	display: inline-block;
-	background: #1c1c25;
-	border-radius: 30px;
+	--bg: #1c1c25;
+	--color: #ffffff;
+	--radius: 30px;
+	--font-size: 18px;
+	--padding: 0 20px;
+	--width: 380px;
+	--height: 100px;
+	padding: var(--padding);
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	min-width: var(--width);
+	min-height: var(--height);
+	background: var(--bg);
+	border-radius: var(--radius);
 	font-weight: 600;
-	font-size: 18px;
-	color: #ffffff;
+	font-size: var(--font-size);
+	color: var(--color);
 	transition: 0.25s;
 	margin: 62px 0;
 }
-.btn:hover {
-	background-color: #6b68ec;
+
+.btn-hover {
+	--hover-bg: #6b68ec;
+	--hover-color: #ffffff;
+}
+.btn-hover:hover {
+	background-color: var(--hover-bg);
+	color: var(--hover-color);
+}
+
+/* Колльори кнопок */
+.btn-red {
+	--bg: var(--color-red);
+	--hover-bg: var(--color-red-hover);
+}
+.btn-blue {
+	--bg: rgb(71, 79, 244);
+	--hover-bg: rgb(25, 31, 155);
+}
+
+.btn-black {
+	--bg: var(--color-black);
+	color: #ffffff;
+}
+
+.btn-green {
+	--bg: var(--color-green);
+	color: #333333;
+}
+
+.btn-red-light {
+	--bg: var(--color-red-light);
+	color: #812e2e;
+}
+
+/* Заокруглення кнопок */
+.btn-no-radius {
+	--radius: 0;
+}
+.btn-round {
+	--radius: 30px;
+}
+
+/* Розміри кнопок */
+.btn-sm {
+	--font-size: 15px;
+	--width: 363px;
+	--height: 99px;
+}
+.btn-lg {
+	--font-size: 20px;
+	--width: 400px;
+	--height: 120px;
+}
+
+/* Різні інші класи */
+.btn-icon {
+	--width: var(--height);
+}
+.btn-text {
+	font-family: var(--base-font);
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 25px;
+	text-align: center;
 }
